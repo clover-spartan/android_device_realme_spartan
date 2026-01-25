@@ -27,6 +27,12 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.ramdisk
 
+# Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camera/config/oplus_camera_algo_switch_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_algo_switch_config \
+    $(LOCAL_PATH)/camera/config/oplus_camera_aps_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_aps_config \
+    $(LOCAL_PATH)/camera/config/oplus_camera_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_config
+
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
